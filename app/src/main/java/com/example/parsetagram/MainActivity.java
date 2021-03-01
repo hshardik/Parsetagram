@@ -30,7 +30,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG="MainActivity";
-    public final static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE= 4103;
+    public final static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE= 1032;
     private EditText etDescription;
     private Button btnCaptureImage;
     private ImageView ivPostImage;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         btnCaptureImage=findViewById(R.id.btnCaptureImage);
         ivPostImage=findViewById(R.id.ivPostImage);
         btnSubmit=findViewById(R.id.btnSubmit);
-        //queryPosts();
+        queryPosts();
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 Bitmap takenImage = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
                 // RESIZE BITMAP, see section below
                 // Load the taken image into a preview
+
                 ivPostImage.setImageBitmap(takenImage);
             } else { // Result was a failure
                 Toast.makeText(this, "Picture wasn't taken!", Toast.LENGTH_SHORT).show();
