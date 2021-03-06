@@ -32,7 +32,7 @@ private RecyclerView rvPosts;
 public static final String TAG="PostsFragment";
 protected PostsAdapter adapter;
 protected List<Post> allPosts;
-//SwipeRefreshLayout swipeContainer;
+SwipeRefreshLayout swipeContainer;
     public PostsFragment() {
         // Required empty public constructor
     }
@@ -53,6 +53,13 @@ protected List<Post> allPosts;
         //0 create a layout for one row in the list
         //1 create the adapter
         rvPosts=view.findViewById(R.id.rvPosts);
+        swipeContainer = view.findViewById(R.id.swipeContainer);
+        swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                queryPosts();
+            }
+        });
         //2 create the data source
         allPosts = new ArrayList<>();
         // create the adapter
@@ -85,6 +92,7 @@ protected List<Post> allPosts;
                 }
                 allPosts.addAll(posts);
                 adapter.notifyDataSetChanged();
+                swipeContainer.setRefreshing(false);
             }
         });
     }
