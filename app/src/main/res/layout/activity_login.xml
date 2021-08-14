@@ -9,15 +9,14 @@
     tools:context=".LoginActivity"
     android:orientation="vertical">
 
+
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
-        android:hint="Username"
-         />
-
+        android:hint="Username" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -36,8 +35,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Login"
-        />
+        android:backgroundTint="#03A9F4"
+        android:text="Login" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="#64D560"
+        android:text="Sign Up" />
 
 
 </LinearLayout>
