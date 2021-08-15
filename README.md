@@ -58,7 +58,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/Kidrah31/Parsetagram/blob/master/Walkthrough_update.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/Kidrah31/Parsetagram/blob/master/Walkthrough_update_1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
